@@ -1,4 +1,4 @@
-# libraries
+# library
 from hashlib import sha256
 
 # greet user and ask for what password they'd like to set
