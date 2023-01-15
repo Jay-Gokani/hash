@@ -5,13 +5,15 @@ from hashlib import sha256
 print ('Hello, this demo will ask for a plaintext password, hash it and will verify the hash for access requests. For reference, a hash is a scrambled consistent alphanumeric version of a plaintext password. For example, the hash of "Jay" is: 0c9ab8c55d678ea513149008ce0ca19990aabc50f6bde84189031dad16079780')
 
 # store the first hash as a variable
-hash1 = (sha256(input('What password would you like to set? ').encode('utf-8'))).hexdigest()
+hash1 = (sha256(input('What phony password would you like to set? ').encode('utf-8'))).hexdigest()
+print('The hash of your plaintext password is:', hash1)
 
 # print message saying password hash has been stored
 print ('Your password hash has been successfully stored.')
 
 # promt the user for re-entry of password, hash then store as another var
 hash2 = (sha256(input('I will test your hash. Please type your password: ').encode('utf-8'))).hexdigest()
+print('The hash of your plaintext password is:', hash2)
 
 # if same: access approved, else: access denied
 while True:
